@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Pro-40 Fruits Catcher</title>
+
+    <!-- Javascript libraries -->
+    <script src="libraries/p5.js"></script>
+    <script src="libraries/p5.dom.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+    <script src="libraries/matter.js"></script>
+    <script src="libraries/p5.play.js"></script>
+
+    <!-- Javascript Objects  -->
+    <script src="js/form.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/player.js"></script>
+
+    <!-- Sass -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDjYwS9uda5arW1k0_2w-2fo6wuuQWLTrM",
+        authDomain: "pro-40-fruit-catching.firebaseapp.com",
+        databaseURL:
+          "https://pro-40-fruit-catching-default-rtdb.firebaseio.com",
+        projectId: "pro-40-fruit-catching",
+        storageBucket: "pro-40-fruit-catching.appspot.com",
+        messagingSenderId: "760828960949",
+        appId: "1:760828960949:web:0cd38265e81a7178665efc",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <!-- Main Javascript File  -->
+    <script src="sketch.js"></script>
+  </body>
+</html>
