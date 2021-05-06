@@ -1,3 +1,10 @@
+/*
+ Player: 6th May 2021
+ - It gets the player count from the database using getCount and updateCount
+ - Updates the playerinfo like there name score and distance in update.
+ - it gets the score and updates it in updateScore and getScore().
+ - and also cheak the index of players.
+*/
 class Player {
   constructor() {
     this.index = null;

@@ -1,16 +1,14 @@
-var database;
-var back_img;
-var gameState = 0;
 var playerCount = 0;
-var allPlayers;
-
-var player, form, game;
-var player1, player2;
-var players;
-var fruits;
-var fruitGroup;
-var fruit1_img, fruit2_img, fruit3_img, fruit4_img, fruit5_img;
-var player_img;
+var gameState = 0;
+var database, player, form, game, back_img;
+var player1, player2, players, allPlayers, player_img;
+var fruits,
+  fruitGroup,
+  fruit1_img,
+  fruit2_img,
+  fruit3_img,
+  fruit4_img,
+  fruit5_img;
 
 function preload() {
   back_img = loadImage("images/jungle.jpg");
@@ -20,19 +18,25 @@ function preload() {
   fruit3_img = loadImage("images/melon2.png");
   fruit4_img = loadImage("images/orange2.png");
   fruit5_img = loadImage("images/pineapple2.png");
-  fruitGroup = new Group();
 }
 function setup() {
-  createCanvas(1000, 600);
+  // Canvas and Database
+  const canvas = createCanvas(1000, 600);
   database = firebase.database();
+
+  // Game
   game = new Game();
   game.getState();
   game.start();
+
+  // Groups
+  fruitGroup = new Group();
 }
 
 function draw() {
   background(back_img);
 
+  // Game Control
   if (playerCount === 2) {
     game.update(1);
   }

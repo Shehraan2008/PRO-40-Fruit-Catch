@@ -1,11 +1,34 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
 canvas {
   display: block;
   border: 5px solid maroon;
-  margin-right:auto;
-  margin-left:auto;
+  margin-right: auto;
+  margin-left: auto;
   margin-top: 100px;
+}
+
+h2 {
+  color: skyblue;
+  font-size: 70px;
+}
+
+input {
+  height: 20px;
+  width: 200px;
+  background: lavender;
+}
+
+button {
+  width: 200px;
+  height: 20px;
+  background: lightcoral;
+}
+
+.greeting {
+  color: white;
+  font-size: 100px;
 }

@@ -1,5 +1,14 @@
+/*
+The Game Class: 6th may 2021
+- This class is supposed to be the main game in play where all the sprites are made and the game logic is introduced 
+- This includes getting the gamestate form the database and then updating it in getState and update().
+- Start is start of the game this includes intilizing the sprites and cheacking if the players are there or not.
+- end this when the game ends.
+*/
+
 class Game {
   constructor() {}
+
   getState() {
     var gameStateRef = database.ref("gameState");
     gameStateRef.on("value", function (data) {
@@ -12,6 +21,7 @@ class Game {
       gameState: state,
     });
   }
+
   async start() {
     if (gameState === 0) {
       player = new Player();
@@ -99,6 +109,6 @@ class Game {
   }
 
   end() {
-    console.log("Game Ended");
+    console.log("OwO Game Ended UwU ");
   }
 }
