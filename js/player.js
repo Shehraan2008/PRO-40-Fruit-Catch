@@ -34,4 +34,16 @@ class Player {
       allPlayers = data.val();
     });
   }
+
+  static getScore() {
+    database.ref("score").on("value", (data) => {
+      this.score = data.val();
+    });
+  }
+
+  static updateScore(score) {
+    database.ref("/").update({
+      score: score,
+    });
+  }
 }
